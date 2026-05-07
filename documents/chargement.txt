@@ -1,0 +1,2 @@
+question 5:
+Le main appelle le chargeur magasin qui va regarder si le CD est dans le magasin si oui il le lit sinon il le créer puis il l'ajoute au magasin.
