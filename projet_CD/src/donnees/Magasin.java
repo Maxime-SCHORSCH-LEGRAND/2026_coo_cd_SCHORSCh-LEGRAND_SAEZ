@@ -92,4 +92,39 @@ public class Magasin {
 
 		listeCds = listeTriee;
 	}
+	public class ComparateurPistes implements ComparateurCd {
+
+		public boolean etreAvant(CD cd1, CD cd2) {
+			return cd1.getNombrePistes()
+					< cd2.getNombrePistes();
+		}
+	}
+	public ArrayList<CD> chercherArtiste(String nom) {
+
+		ArrayList<CD> res = new ArrayList<>();
+
+		for(CD cd : listeCds) {
+
+			if(cd.getArtiste().equalsIgnoreCase(nom)) {
+				res.add(cd);
+			}
+		}
+
+		return res;
+	}
+	public ArrayList<CD> chercher(Selecteur s) {
+
+		ArrayList<CD> res = new ArrayList<>();
+
+		for(CD cd : listeCds) {
+
+			if(s.garderCd(cd)) {
+				res.add(cd);
+			}
+		}
+
+		return res;
+	}
+
 }
+
