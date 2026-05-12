@@ -40,4 +40,28 @@ la recherche de l’indice minimum ;
 l’ajout dans la liste triée ;
 la suppression dans la liste restante.
 car ce sont des parties qui ne changent pas 
-Mais si il y a une erreur il faudrait la réglé  
+Mais si il y a une erreur il faudrait la réglé 
+
+question5 : 
+Code commun
+
+Le code commun correspond à l’algorithme de tri lui-même :
+
+parcourir la liste ;
+chercher le plus petit élément ;
+le placer dans la liste triée ;
+recommencer jusqu’à la fin.
+
+question 6:
+Si l’on souhaite utiliser un autre algorithme :
+
+tri par insertion ;
+tri fusion ;
+tri bulle ;
+
+il faudrait modifier la partie algorithmique du programme.
+la comparaison entre CDs resterait la même :
+
+comparer les artistes ;
+comparer les albums ;
+comparer les pistes.
