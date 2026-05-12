@@ -5,7 +5,7 @@ import donnees.Magasin;
 
 public class MagasinTest {
 
-    @Test
+
     void testTriSelectionPremierEtDernier() {
 
         Magasin magasin = new Magasin();
@@ -24,5 +24,29 @@ public class MagasinTest {
 
         String dernierTitre = magasin.getListeCds().get(taille - 1).getTitreCD();
         assertEquals("Ziggy", dernierTitre, "Le dernier élément après tri devrait être Ziggy");
+    }
+
+    public void testTriAlbum() {
+
+        Magasin m = new Magasin();
+
+        m.ajouteCd(new CD("Thriller","MJ"));
+        m.ajouteCd(new CD("Back","ACDC"));
+
+        m.trier(new ComparateurAlbum());
+
+        assertEquals("Back", m.getCd(0).getTitre());
+    }
+    @Test
+    public void testTriArtiste() {
+
+        Magasin m = new Magasin();
+
+        m.ajouteCd(new CD("A","Queen"));
+        m.ajouteCd(new CD("B","ACDC"));
+
+        m.trier(new ComparateurArtiste());
+
+        assertEquals("ACDC", m.getCd(0).getArtiste());
     }
 }

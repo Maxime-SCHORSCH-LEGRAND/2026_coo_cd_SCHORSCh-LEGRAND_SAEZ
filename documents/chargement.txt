@@ -1,2 +1,43 @@
 question 5:
 Le main appelle le chargeur magasin qui va regarder si le CD est dans le magasin si oui il le lit sinon il le créer puis il l'ajoute au magasin.
+
+question 12:
+Duplication de code
+
+Le code du tri est répété dans plusieurs méthodes presque identiques.
+Si une erreur existe dans l’algorithme, il faut la corriger dans toutes les méthodes.
+
+Difficulté de maintenance
+
+Si on modifie le tri , il faut modifier plusieurs endroits du programme.
+
+td10-11
+
+question3 :
+Si l’on souhaite ajouter un nouveau tri, par exemple :
+
+tri par nombre de pistes ;
+tri par durée totale ;
+tri par année de sortie ;
+
+il faudrait créer une nouvelle méthode supplémentaire dans la classe Magasin.
+
+Cette nouvelle méthode reprendrait presque tout le code des précédentes :
+
+création d’une nouvelle liste ;
+recherche du minimum ;
+déplacement des éléments ;
+boucle de tri.
+
+Seule la comparaison entre deux CDs changerait.
+
+question 4:
+Les parties copiées sont :
+
+la boucle while ;
+la boucle for ;
+la recherche de l’indice minimum ;
+l’ajout dans la liste triée ;
+la suppression dans la liste restante.
+car ce sont des parties qui ne changent pas 
+Mais si il y a une erreur il faudrait la réglé  

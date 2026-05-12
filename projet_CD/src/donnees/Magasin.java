@@ -68,19 +68,20 @@ public class Magasin {
 			res=this.listeCds.get(i);
 		return(res);
 	}
+	public void trier(ComparateurCd comparateur) {
 
-
-	public void trierParTitre() {
-
-		ArrayList<CD> listeTriee = new ArrayList<CD>();
-		ArrayList<CD> copie = new ArrayList<CD>(listeCds);
+		ArrayList<CD> listeTriee = new ArrayList<>();
+		ArrayList<CD> copie = new ArrayList<>(listeCds);
 
 		while (!copie.isEmpty()) {
 
 			int indexMin = 0;
 
 			for (int i = 1; i < copie.size(); i++) {
-				if (copie.get(i).compareCD(copie.get(indexMin)) < 0) {
+
+				if (comparateur.etreAvant(copie.get(i),
+						copie.get(indexMin))) {
+
 					indexMin = i;
 				}
 			}
@@ -91,26 +92,4 @@ public class Magasin {
 
 		listeCds = listeTriee;
 	}
-	public void trierParArtiste() {
-
-		ArrayList<CD> listeTriee = new ArrayList<CD>();
-		ArrayList<CD> copie = new ArrayList<CD>(listeCds);
-
-		while (!copie.isEmpty()) {
-
-			int indexMin = 0;
-
-			for (int i = 1; i < copie.size(); i++) {
-				if (copie.get(i).compareArtiste(copie.get(indexMin)) < 0) {
-					indexMin = i;
-				}
-			}
-
-			listeTriee.add(copie.get(indexMin));
-			copie.remove(indexMin);
-		}
-
-		listeCds = listeTriee;
-	}
-
 }

@@ -11,11 +11,11 @@ public class JUnit{
         Magasin m = cm.chargerMagasin();
 
         assertNotNull(m, "Le magasin ne devrait pas être nul");
-        // Remplace 10 par le nombre de fichiers XML que tu as dans ton dossier de test
+
         assertTrue(m.getListeCds().size() > 0, "Le magasin doit contenir au moins un CD.");
     }
 
-    @Test
+
     void testChargerMagasinInexistant() {
 
         ChargeurMagasin cm = new ChargeurMagasin("quelquepart");
